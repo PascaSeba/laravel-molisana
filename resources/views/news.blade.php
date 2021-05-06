@@ -4,6 +4,6 @@
 
 @section('content')
     <main class="news_main">
-        <h1>News</h1>
+        <h1>News section</h1>
     </main>
 @endsection

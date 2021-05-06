@@ -9,6 +9,24 @@ body {
 }
 
 
+/* Header */
+
+.header_container .menu li a,
+.header_container .menu li {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    margin: 5px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.header_container .menu li:hover {
+    background-color: rgb(177, 238, 255);
+}
+
+
 /* HOME */
 
 #home_img {
@@ -16,13 +34,25 @@ body {
 }
 
 
-/* Products */
+/* PRODUCTS */
 
 .products_body h1:first-child,
 .news_main h1:first-child,
 .home_main h1:first-child {
     font-size: 2.5em;
     color: grey;
+    margin-top: 20px;
+}
+
+.products_body img {
+    width: 35%;
+    margin-bottom: 50px;
+}
+
+.products_body .type {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 3.2em;
 }
 
 
