@@ -1,3 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: yellow;
+    font-size: 16px;
+}
+
+
+/* HOME */
+
+#home_img {
+    width: 50%;
+}
+
+
+/* Products */
+
+.products_body h1:first-child,
+.news_main h1:first-child,
+.home_main h1:first-child {
+    font-size: 2.5em;
+    color: grey;
+}
+
+
+/* Footer */
+
+.footer_container ul li a {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer_container ul li {
+    list-style: none;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.footer_container ul {
+    margin-bottom: 30px;
+}
+
+.footer_container ul li:first-child {
+    margin-top: 10px;
+}
+
+.info_list li {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.maiusc_list li {
+    text-transform: uppercase;
+}
+
+.info_list a {
+    color: grey;
+    text-decoration: none;
 }
