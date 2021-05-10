@@ -12,9 +12,9 @@
                 @foreach ($formato as $key => $pasta)
                     <div class="pasta_card">
                         <img src="{{$pasta['src']}}" alt="{{$pasta['titolo']}}">
-                        <div class="overlay">
+                        {{-- <div class="overlay">
                             <a href="{{ route('pagina-dettaglio', ['id' => $key]) }}">{{$pasta['titolo']}}</a>
-                        </div>
+                        </div> --}}
                     </div>
                 @endforeach
             </div>
