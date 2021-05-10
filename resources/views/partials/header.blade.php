@@ -4,13 +4,13 @@
         <nav>
             <ul class="menu">
                 <li>
-                    <a href="/">Home</a>
+                    <a href="{{route('pagina-home')}}" class="{{(Request::route()->getName() == 'pagina-home') ? 'active' : ''}}">Home</a>
                 </li>
                 <li>
-                    <a href="/news">News</a>
+                    <a href="{{route('pagina-news')}}" class="{{(Request::route()->getName() == 'pagina-news') ? 'active' : ''}}">News</a>
                 </li>
                 <li>
-                    <a href="/prodotti">Prodotti</a>
+                    <a href="{{route('pagina-prodotti')}}" class="{{(Request::route()->getName() == 'pagina-prodotti') ? 'active' : ''}}">Prodotti</a>
                 </li>
             </ul>
         </nav>

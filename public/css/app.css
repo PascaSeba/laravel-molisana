@@ -22,7 +22,7 @@ body {
     padding: 5px;
 }
 
-.header_container .menu li:hover {
+.active {
     background-color: rgb(177, 238, 255);
 }
 
@@ -47,6 +47,7 @@ body {
 .products_body img {
     width: 35%;
     margin-bottom: 50px;
+    display: inline-block;
 }
 
 .products_body .type {
