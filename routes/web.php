@@ -15,31 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-}) -> name('pagina-home');
+})->name('pagina-home');
 
 Route::get('/news', function () {
     return view('news');
-})-> name('pagina-news');
+})->name('pagina-news');
 
 Route::get('/prodotti', function () {
 
-    $pasta = config('pasta');
-
-    $data = [
-        'paste' => $pasta /* Perché devo dare una chiave all'array per riuscire a usarlo? */
-    ];
-
-
-    return view('products', $data);
-    })-> name('pagina-prodotti');
-
-
-   /*  METODO FILTER:
-    $pasta_lunga = array_filter($pasta), function($elemento)
-    return $elemento['tipo'] == 'lunga'; */
-
-
-    /* METODO CONFIG CON COLLECTION(raccomandato): 
+    //METODO CONFIG CON COLLECTION(raccomandato): 
     $pasta = config('pasta');
 
     $collection = collect($pasta);
@@ -55,7 +39,10 @@ Route::get('/prodotti', function () {
             'cortissima' => $pasta_cortissima
         ]
     ];
-    */
+
+    /*  METODO FILTER:
+    $pasta_lunga = array_filter($pasta), function($elemento)
+    return $elemento['tipo'] == 'lunga'; */
 
 
     /* MIO PRIMO METODO:
@@ -66,3 +53,18 @@ Route::get('/prodotti', function () {
             $data['categorie_pasta'][] = $pasta['tipo'];
         }
     }; */
+
+    return view('products', $data);
+})->name('pagina-prodotti');
+
+
+
+Route::get('/dettaglio/{id}', function ($id) {
+    $pasta = config('pasta');
+    $data = [
+        'formato' => $pasta[$id],
+        'id' => $id
+    ];
+
+    return view('dettagli', $data);
+})->name('pagina-dettaglio');
